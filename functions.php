@@ -667,7 +667,11 @@ endif;
 
 add_action( 'init', 'idaho_webmaster_disable_wp_emojicons' );
 
-
+function idaho_version_in_footer() {
+	$id_theme = wp_get_theme(get_template()); 
+	echo "<div style='text-align:right;font-size:0.7em;color:#efefef;padding-right:5px;'>ver: " . esc_html($id_theme->get('Version')) . "</div>";
+}
+add_action('wp_footer', 'idaho_version_in_footer');
 
 if ( ! function_exists( 'idaho_webmaster_responsive_video_embeds' ) ) :
 
