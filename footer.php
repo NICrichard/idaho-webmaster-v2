@@ -42,16 +42,19 @@ $idaho_webmaster_color_secondary = substr( get_theme_mod( 'idaho_color_light_blu
     ga('send', 'pageview');
 
   </script>
-<?php endif; ?>
-
-<?php wp_footer(); ?>
-
+<?php 
+endif; 
+wp_footer(); 
+?>
+<div class="versioning"><small><?php 
+$id_theme = wp_get_theme(); 
+echo "version: " . esc_html($id_theme->get('Version'));
+?></small></div>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 </body>
 </html>
