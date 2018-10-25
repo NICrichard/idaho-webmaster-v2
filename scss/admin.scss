@@ -1,0 +1,477 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+$icon-font-path: "../fonts/";
+@import "bootstrap/glyphicons";
+
+.mce-glyphicon-container > .mce-reset > .mce-container-body {
+	padding    : 15px;
+	width      : 480px !important;
+	word-wrap  : break-word;
+	white-space: normal;
+	overflow-y : scroll !important;
+
+	.mce-container {
+		width   : auto !important;
+		position: relative;
+		height  : auto !important;
+	}
+
+	.mce-container-body {
+		height     : auto !important;
+		width      : auto !important;
+		word-wrap  : break-word;
+		white-space: normal;
+		overflow   : visible;
+	}
+}
+
+.mce-glyphicon-container .mce-button-glyphicon {
+	width   : 16px !important;
+	height  : 16px !important;
+	margin  : 5px !important;
+	padding : 6px !important;
+	display : inline-block !important;
+	position: relative !important;
+	top     : auto !important;
+	left    : auto !important;
+
+	button {
+		padding : 0 !important;
+		width   : 16px !important;
+		height  : 16px !important;
+		position: relative !important;
+	}
+}
+
+.mce-ico.mce-i-info:before {
+	content    : "\f348";
+	font-family: "dashicons";
+	font-size  : 18px;
+}
+
+.sow-icon-glyphicons {
+	position               : relative !important;
+	top                    : 1px;
+	display                : inline-block;
+	font-family            : "Glyphicons" !important;
+	font-style             : normal;
+	font-weight            : normal;
+	line-height            : 1;
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sow-icon-glyphicons[data-sow-icon]:before {
+	content: attr(data-sow-icon);
+}
+
+.sow-icon-glyphicons_social {
+	font-family            : "Glyphicons Social" !important;
+	position               : relative !important;
+	top                    : 1px;
+	display                : inline-block;
+	font-style             : normal;
+	font-weight            : normal;
+	line-height            : 1;
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sow-icon-glyphicons_social[data-sow-icon]:before {
+	content: attr(data-sow-icon);
+}
+
+.siteorigin-panels-builder .so-rows-container .so-row-toolbar .so-dropdown-wrapper .so-dropdown-links-wrapper {
+	z-index: 110 !important;
+}
+
+.col-seperator {
+	position   : absolute;
+	left       : 0;
+	top        : 0;
+	visibility : hidden;
+	opacity    : 0;
+	width      : 10px;
+	height     : 100%;
+	margin-left: -5px;
+
+	&.premiere {
+		left: (100% / 12);
+	}
+
+	&.second {
+		left: (100% / 12) * 2;
+	}
+
+	&.third {
+		left: (100% / 12) * 3;
+	}
+
+	&.forth {
+		left: (100% / 12) * 4;
+	}
+
+	&.fifth {
+		left: (100% / 12) * 5;
+	}
+
+	&.sixth {
+		left: (100% / 12) * 6;
+	}
+
+	&.seventh {
+		left: (100% / 12) * 7;
+	}
+
+	&.eighth {
+		left: (100% / 12) * 8;
+	}
+
+	&.ninth {
+		left: (100% / 12) * 9;
+	}
+
+	&.tenth {
+		left: (100% / 12) * 10;
+	}
+
+	&.eleventh {
+		left: (100% / 12) * 11;
+	}
+
+	&.twelfth {
+		left: (100% / 12) * 12;
+	}
+}
+
+body .so-panels-dialog.so-panels-dialog-has-right-sidebar .so-content {
+	right: 30px;
+}
+
+body .so-panels-dialog.so-panels-dialog-has-right-sidebar .so-right-sidebar {
+	display: none;
+}
+
+.siteorigin-panels-builder .so-rows-container .so-row-container {
+	position: relative;
+}
+
+body .siteorigin-panels-builder .so-rows-container .so-row-container .so-cells .cell .widgets-container .so-widget {
+	&:hover {
+		.actions {
+			background: #feffff;
+		}
+	}
+max-height: 60px;
+
+	small {
+		visibility: hidden;
+		height    : 25px;
+	}
+
+	.so-widget-wrapper {
+		padding: 9px 9px 5px;
+	}
+
+	.title {
+		h4 {
+			color    : #0073aa;
+			font-size: 14px !important;
+
+			&:hover {
+				color: #0096dd;
+			}
+		}
+
+		.actions {
+			right  : auto;
+			left   : 0;
+			bottom : 9px;
+			top    : auto;
+			padding: 2px 2px 2px 9px;
+
+			a {
+				margin   : 0;
+				color    : #0073aa;
+				opacity  : 1;
+				font-size: 13px;
+
+				&:hover {
+					color: #0096dd;
+				}
+			}
+
+			a:after {
+				content: " | ";
+				color  : #ddd;
+			}
+
+			a.widget-delete {
+				color: #a00;
+
+				&:hover {
+					color     : #f00;
+					background: transparent;
+				}
+
+				&:after {
+					content: "";
+				}
+			}
+		}
+	}
+}
+
+.so-panels-dialog .so-toolbar .so-buttons .action-buttons,
+.siteorigin-panels-builder .so-builder-toolbar > .so-tool-button.so-live-editor {
+	display: none !important;
+}
+
+body .siteorigin-widget-form .siteorigin-widget-field-repeater .siteorigin-widget-field-repeater-add {
+	display              : inline-block;
+	text-decoration      : none;
+	font-size            : 13px;
+	margin               : 0;
+	cursor               : pointer;
+	border-width         : 1px;
+	border-style         : solid;
+	-webkit-appearance   : none;
+	-webkit-border-radius: 3px;
+	border-radius        : 3px;
+	white-space          : nowrap;
+	-webkit-box-sizing   : border-box;
+	-moz-box-sizing      : border-box;
+	box-sizing           : border-box;
+	height               : 30px;
+	line-height          : 28px;
+	padding              : 0 12px 2px;
+	background           : #0085ba;
+	border-color         : #0073aa #006799 #006799;
+	-webkit-box-shadow   : 0 1px 0 #006799;
+	box-shadow           : 0 1px 0 #006799;
+	color                : #fff;
+	text-decoration      : none;
+	text-shadow          : 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+	margin-top           : 15px;
+
+	&:hover {
+		background  : #008ec2;
+		border-color: #006799;
+		color       : #fff;
+	}
+}
+
+body .siteorigin-widget-form .siteorigin-widget-field-repeater {
+	.siteorigin-widget-field-expand,
+	.siteorigin-widget-field-copy,
+	.siteorigin-widget-field-remove {
+		width      : auto;
+		height     : auto;
+		position   : relative;
+		top        : auto;
+		margin-top : auto;
+		cursor     : pointer;
+		font-size  : 13px;
+		line-height: 1em;
+		text-align : left;
+		display    : inline-block;
+		right      : auto;
+		margin-left: 2px;
+
+		&:hover:before {
+			color: #0096dd;
+		}
+
+		&:before {
+			color: #0073aa;
+		}
+
+		&:after {
+			content: " | ";
+			color  : #ddd;
+		}
+	}
+
+	h4 {
+		color    : #0073aa;
+		font-size: 14px !important;
+
+		&:hover {
+			color: #0096dd;
+		}
+	}
+
+	.siteorigin-widget-field-copy {
+		&:before {
+			content    : "Duplicate";
+			font-family: inherit;
+		}
+	}
+
+	.siteorigin-widget-field-expand {
+		margin-left: 0;
+
+		&:before {
+			content    : "Edit";
+			font-family: inherit;
+		}
+	}
+
+	.siteorigin-widget-field-remove {
+		&:hover {
+			background: transparent;
+
+			&:before {
+				color: #f00;
+			}
+		}
+
+		&:before {
+			content    : "Delete";
+			font-family: inherit;
+			color      : #a00;
+		}
+
+		&:after {
+			content: "";
+		}
+	}
+}
+
+#minor-publishing-actions .preview {
+	border-color: #0073aa;
+}
+
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content {
+  zoom: 1;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-items:before {
+  content: '';
+  display: block;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-items:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-no-results {
+  margin: 20px 0;
+  padding: 0 5px;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding: 6px;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-directory-item-wrapper {
+  padding: 15px 10px;
+  background: #F7F7F7;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-title {
+  font-size: 15px;
+  margin: 0 0 13px 0;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-screenshot {
+  background: #ffffff;
+  margin-bottom: 10px;
+  border: 1px solid #d0d0d0;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-screenshot.so-loading {
+  background-image: url("images/wpspin_light.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-screenshot.so-loading {
+    background-image: url(images/wpspin_light-2x.gif);
+    background-size: 16px 16px;
+  }
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-screenshot a {
+  display: block;
+  min-height: 40px;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-bottom {
+  height: 49px;
+  position: relative;
+  margin: 10px -10px -15px -10px;
+  background: #fcfcfc;
+  border-top: 1px solid #d0d0d0;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-bottom .so-title {
+  position: absolute;
+  top: 1em;
+  left: 10px;
+  z-index: 1;
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item .so-bottom .so-buttons {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 11px 10px 10px 15px;
+  height: 49px;
+  border-left: 1px solid #d0d0d0;
+  background: #f6f6f6;
+  -webkit-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: -1px 0 1px rgba(0, 0, 0, 0.05);
+}
+.so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item:hover .so-buttons {
+  visibility: visible;
+}
+@media only screen and (min-width: 1680px) {
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout {
+    width: 20%;
+  }
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout:nth-of-type(5n+1) {
+    clear: both;
+  }
+}
+@media only screen and (max-width: 1679px) and (min-width: 1280px) {
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout {
+    width: 25%;
+  }
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout:nth-of-type(4n+1) {
+    clear: both;
+  }
+}
+@media only screen and (max-width: 1279px) and (min-width: 1140px) {
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout {
+    width: 33.333%;
+  }
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout:nth-of-type(3n+1) {
+    clear: both;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout {
+    width: 50%;
+  }
+  .so-panels-dialog.so-panels-dialog-prebuilt-layouts .so-content .so-directory-item.layout:nth-of-type(2n+1) {
+    clear: both;
+  }
+}
