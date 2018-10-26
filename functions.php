@@ -142,8 +142,8 @@ if ( ! function_exists( 'idaho_webmaster_widgets_init' ) ) :
 	 */
 	function idaho_webmaster_widgets_init() {
 		register_sidebar( array(
-			'name' 					=> esc_html__( 'General Sidebar', 'idaho-webmaster' ),
-			'id' 						=> 'sidebar-1',
+			'name' 			=> esc_html__( 'General Sidebar', 'idaho-webmaster' ),
+			'id' 			=> 'sidebar-1',
 			'description' 	=> '',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' 	=> '</aside>',
@@ -152,8 +152,8 @@ if ( ! function_exists( 'idaho_webmaster_widgets_init' ) ) :
 		));
 
 		register_sidebar( array(
-			'name' 					=> esc_html__( 'Home Sidebar', 'idaho-webmaster' ),
-			'id' 						=> 'sidebar-home',
+			'name' 			=> esc_html__( 'Home Sidebar', 'idaho-webmaster' ),
+			'id' 			=> 'sidebar-home',
 			'description' 	=> '',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s panel panel-default alt">',
 			'after_widget' 	=> '</div></aside>',
@@ -162,8 +162,8 @@ if ( ! function_exists( 'idaho_webmaster_widgets_init' ) ) :
 		));
 
 		register_sidebar( array(
-			'name' 					=> esc_html__( 'Page Sidebar', 'idaho-webmaster' ),
-			'id' 						=> 'sidebar-page',
+			'name' 			=> esc_html__( 'Page Sidebar', 'idaho-webmaster' ),
+			'id' 			=> 'sidebar-page',
 			'description' 	=> '',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' 	=> '</aside>',
@@ -181,13 +181,13 @@ if ( ! function_exists( 'idaho_webmaster_widgets_init' ) ) :
 		 */
 		function footer_sidebar_register( $index ) {
 			register_sidebar(array(
-				'name' 					=> esc_html__( 'Footer Column ', 'idaho-webmaster' ) . $index,
-				'id' 						=> 'footer-column-'.$index,
-				'description' => '',
+				'name' 			=> esc_html__( 'Footer Column ', 'idaho-webmaster' ) . $index,
+				'id' 			=> 'footer-column-'.$index,
+				'description' 	=> '',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget' => '</div>',
-				'before_title' => '<h3 class="widget-title">',
-				'after_title' => '</h3>',
+				'after_widget' 	=> '</div>',
+				'before_title' 	=> '<h3 class="widget-title">',
+				'after_title' 	=> '</h3>',
 			));
 		};
 
@@ -669,9 +669,10 @@ add_action( 'init', 'idaho_webmaster_disable_wp_emojicons' );
 
 function idaho_version_in_footer() {
 	$id_theme = wp_get_theme(get_template()); 
-	echo "<div style='text-align:right;font-size:0.7em;color:#efefef;padding-right:5px;'>ver: " . esc_html($id_theme->get('Version')) . "</div>";
+	echo "<div class='versioning'>ver: " . esc_html($id_theme->get('Version')) . "</div>";
 }
 add_action('wp_footer', 'idaho_version_in_footer');
+
 
 if ( ! function_exists( 'idaho_webmaster_responsive_video_embeds' ) ) :
 
@@ -703,9 +704,8 @@ endif;
 
 add_filter( 'oembed_dataparse', 'idaho_webmaster_responsive_video_embeds', 10, 2 );
 
-add_filter( 'auto_update_plugin', '__return_false' );
+add_filter('auto_update_plugin', '__return_false');
 
-add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
 /**
  * Implement the Custom Header feature.
