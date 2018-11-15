@@ -1,14 +1,3 @@
-<?php
-/**
- * Template part for displaying posts.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Idaho_Webmaster
- */
-
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'panel panel-default alt' ); ?>>
 	<header class="entry-header panel-heading">
 		<?php the_title( sprintf( '<h4 class="entry-title panel-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
