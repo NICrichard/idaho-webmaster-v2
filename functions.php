@@ -668,8 +668,10 @@ endif;
 add_action( 'init', 'idaho_webmaster_disable_wp_emojicons' );
 
 function idaho_version_in_footer() {
-	$id_theme = wp_get_theme(get_template()); 
-	echo "<div class='versioning'>ver: " . esc_html($id_theme->get('Version')) . "</div>";
+	$id_theme = wp_get_theme(get_template());
+	$last_mod = get_the_modified_date('M m, Y');
+	$mod_on = sprintf(esc_html('%s'), $last_mod);
+	echo "<div class='versioning'>ver: " . esc_html($id_theme->get('Version')) . " | last updated: <time>" . $mod_on . " at " . get_the_modified_time() . "</time></div>";
 }
 add_action('wp_footer', 'idaho_version_in_footer');
 
