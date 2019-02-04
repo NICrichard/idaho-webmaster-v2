@@ -667,14 +667,22 @@ endif;
 
 add_action( 'init', 'idaho_webmaster_disable_wp_emojicons' );
 
+function page_last_updated() {
+	$original_time = get_the_time('U');
+	$modified_time = get_the_modified_time('U');
+	if ($modified_time >= $original_time + 86400) {
+		$updated_time = get_the_modified_time('h:i a');
+		$updated_day = get_the_modified_time('F j, Y');
+		$modified_content = $updated_day . ' at ' . $updated_time;
+	}
+	return $modified_content;
+}
+
 function idaho_version_in_footer() {
 	$id_theme = wp_get_theme(get_template());
-	$last_mod = get_the_modified_date('M m, Y');
-	$mod_on = sprintf(esc_html('%s'), $last_mod);
-	echo "<div class='versioning'>ver: " . esc_html($id_theme->get('Version')) . " | last updated: <time>" . $mod_on . " at " . get_the_modified_time() . "</time></div>";
+	echo "<div class='versioning'>ver: " . esc_html($id_theme->get('Version')) . " | last updated: <time>" . page_last_updated() . "</time></div>";
 }
 add_action('wp_footer', 'idaho_version_in_footer');
-
 
 if ( ! function_exists( 'idaho_webmaster_responsive_video_embeds' ) ) :
 
